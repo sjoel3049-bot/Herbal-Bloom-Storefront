@@ -15,12 +15,12 @@ export const productCatalog: Product[] = [
     name: 'Herbal Bloom 18 Herbs Hair Oil',
     shortName: '18 Herbs Hair Oil',
     descriptor: 'The singular product in the Herbal Bloom ritual.',
-    priceLabel: 'Price to be confirmed',
-    sizeLabel: 'Size to be confirmed',
+    priceLabel: '$25.99',
+    sizeLabel: '8 fl oz / 236 mL',
     details: [
-      'Product details to be confirmed.',
-      'Ingredient information to be confirmed.',
-      'Usage guidance to be confirmed.',
+      'Directions for use: Apply a small amount to the scalp and/or hair. Gently massage the oil into the scalp with your fingertips. Leave the oil in for your preferred amount of time. Wash or rinse hair as desired.',
+      'Basic care: For external use only. Avoid contact with eyes. Discontinue use if irritation occurs.',
+      'Ingredient information: Pending confirmation.',
     ],
     image: '/herbal-bloom-bottle.png',
   },
@@ -29,5 +29,5 @@ export const productCatalog: Product[] = [
 export const brandFacts = {
   name: 'Herbal Bloom',
   line: 'A considered hair-care ritual.',
-  note: 'Product information is being finalized. We keep this space clear until every detail is ready to share.',
+  note: 'Product information is being finalized.',
 };
