@@ -1,51 +1,41 @@
-'use client';
-import { notFound } from 'next/navigation';
-import { useCart } from '@/context/CartContext';
-
 export default function ProductPage({ params }: { params: { id: string } }) {
-  const { addToCart } = useCart();
-  
-  if (params.id !== '18-herbs-oil') {
-    notFound();
-  }
-
-  const handleAddToCart = () => {
-    addToCart({
-      id: '18-herbs-oil',
-      name: 'Herbal Bloom 18 Herbs Hair Oil',
-      price: 25.99,
-      quantity: 1,
-      image: '/herbal-bloom-bottle.png'
-    });
-    alert('Added to cart!');
-  };
-
   return (
-    <main className="min-h-screen py-24 px-8 max-w-6xl mx-auto">
-      <div className="grid md:grid-cols-2 gap-16">
-        <div className="bg-[#EAE4D7] h-[500px] flex items-center justify-center">
-          <img src="/herbal-bloom-bottle.png" alt="Herbal Bloom 18 Herbs Hair Oil" className="max-h-full object-contain" />
+    <main className="min-h-screen bg-cream text-black px-4 md:px-20 py-20">
+      <div className="flex flex-col md:flex-row gap-16 max-w-6xl mx-auto">
+        {/* Photography */}
+        <div className="w-full md:w-1/2 bg-white p-8 rounded-sm shadow-sm flex items-center justify-center">
+          <img src="/herbal-bloom-bottle.png" alt="Herbal Bloom 18 Herbs Hair Oil" className="w-full max-w-sm object-contain" />
         </div>
 
-        <div>
-          <h1 className="text-4xl font-light mb-4">Herbal Bloom 18 Herbs Hair Oil</h1>
-          <p className="text-xl mb-8">$25.99</p>
-          <div className="prose mb-10">
-            <p className="opacity-80 leading-relaxed mb-6">
-              An elegant, botanical blend crafted for daily hair care. Experience the subtle, natural aromatic infusion with every application.
-            </p>
-            <h3 className="font-semibold text-lg mb-2">Ingredients</h3>
-            <p className="italic text-sm opacity-70 mb-6 border-b border-[#2D4539] pb-4">
-              Fenugreek Seeds, Senna Stem, Vetiver Root, Senna Flowers, Vilamichai Root, Licorice Root, Bhringraj, Dried Amla, Rose Petals, Alkanet, White Turmeric, Bakul Flower, Bakuchi Seeds, Senna Leaves, Henna Seeds, Sweet Flag, Myrobalan, Tulsi Leaves.
-            </p>
+        {/* Details */}
+        <div className="w-full md:w-1/2">
+          <h1 className="font-serif text-5xl mb-4 tracking-tight text-forest-green">18 Herbs Hair Oil</h1>
+          <div className="text-3xl font-semibold mb-6">$25.99</div>
+          <div className="text-sm text-gray-500 mb-8">8 fl oz / 236 mL | Flat Shipping: $7</div>
+          
+          <div className="flex items-center gap-4 mb-8">
+            <label className="font-semibold">Quantity</label>
+            <input type="number" defaultValue={1} min={1} className="w-16 p-2 border border-gray-300 rounded-sm" />
+            <button className="bg-forest-green text-cream px-10 py-3 rounded-sm font-semibold flex-grow hover:bg-forest-green/90 transition">
+              Add to Cart
+            </button>
           </div>
 
-          <button 
-            onClick={handleAddToCart}
-            className="bg-[#2D4539] text-white px-12 py-4 uppercase tracking-widest text-sm hover:bg-[#1f3028] transition"
-          >
-            Add to Cart
-          </button>
+          <div className="space-y-8 border-t border-gray-200 pt-8">
+            <div>
+              <h2 className="font-serif text-2xl mb-4 text-forest-green">Our 18-Herb Botanical Blend</h2>
+              <p className="text-gray-700 leading-relaxed">
+                A meticulously selected combination of 18 botanicals, curated for their quality and harmony. Our formulation process emphasizes purity and excellence.
+              </p>
+            </div>
+            
+            <div>
+              <h2 className="font-serif text-2xl mb-4 text-forest-green">Directions</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Apply a small amount to hair as part of your daily ritual, ensuring even distribution.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </main>
