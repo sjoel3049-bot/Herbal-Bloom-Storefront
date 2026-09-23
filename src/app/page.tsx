@@ -11,10 +11,12 @@ export default function Home() {
           <p className="font-sans text-xl md:text-2xl mb-10 max-w-2xl font-light">
             Modern luxury botanical hair care.
           </p>
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <span className="text-2xl font-semibold text-gold">$25.99</span>
+          <div className="flex flex-col items-center gap-2 mb-6">
+            <h2 className="text-3xl font-semibold">Herbal Bloom 18 Herbs Hair Oil</h2>
+            <p className="text-xl opacity-90">8 fl oz / 236 mL</p>
+            <span className="text-4xl font-bold text-gold">$25.99</span>
           </div>
-          <Link href="/product/18-herbs-hair-oil" className="bg-gold text-forest-green px-10 py-4 rounded-sm font-semibold hover:bg-gold/90 transition shadow-lg">
+          <Link href="/product/18-herbs-hair-oil" className="bg-gold text-forest-green px-10 py-4 rounded-sm font-semibold hover:bg-gold/90 transition shadow-lg mt-4 inline-block">
             Shop Now
           </Link>
         </div>
@@ -36,6 +38,7 @@ export default function Home() {
           </div>
           <div className="w-full md:w-1/2 text-left">
             <h3 className="font-serif text-4xl mb-6 text-gold">18 Herbs Hair Oil</h3>
+            <p className="text-2xl font-bold mb-4">$25.99</p>
             <p className="mb-8 text-lg font-light leading-relaxed">
               Experience the transformative power of our botanical blend. This meticulously crafted oil is designed to nourish and elevate your hair care routine, providing a touch of nature's luxury to every strand.
             </p>
