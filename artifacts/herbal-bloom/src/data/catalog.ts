@@ -20,7 +20,7 @@ export const productCatalog: Product[] = [
     details: [
       'Directions for use: Apply a small amount to the scalp and/or hair. Gently massage the oil into the scalp with your fingertips. Leave the oil in for your preferred amount of time. Wash or rinse hair as desired.',
       'Basic care: For external use only. Avoid contact with eyes. Discontinue use if irritation occurs.',
-      'Ingredient information: Pending confirmation.',
+      'Ingredients: Fenugreek Seeds, Senna Stem, Vetiver Root, Senna Flowers, Vilamichai Root, Licorice Root, Bhringraj, Dried Amla, Rose Petals, Alkanet, White Turmeric, Bakul Flower, Bakuchi Seeds, Senna Leaves, Henna Seeds, Sweet Flag, Myrobalan, Tulsi Leaves.',
     ],
     image: '/herbal-bloom-bottle.png',
   },
@@ -29,5 +29,5 @@ export const productCatalog: Product[] = [
 export const brandFacts = {
   name: 'Herbal Bloom',
   line: 'A considered hair-care ritual.',
-  note: 'Product information is being finalized.',
+  note: 'Product information finalized.',
 };
