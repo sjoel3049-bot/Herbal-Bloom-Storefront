@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Herbal Bloom"
+description = "A luxury botanical storefront for Herbal Bloom 18 Herbs Hair Oil, with product storytelling, a responsive shopping flow, and checkout-ready cart architecture."
+version = "1.0.0"
+id = "artifacts/herbal-bloom"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19783
+
+[services.development]
+run = "pnpm --filter @workspace/herbal-bloom run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/herbal-bloom", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/herbal-bloom/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19783"
+BASE_PATH = "/"
