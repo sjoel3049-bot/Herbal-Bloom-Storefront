@@ -9,9 +9,10 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
         {/* Details */}
         <div className="w-full md:w-1/2">
-          <h1 className="font-serif text-5xl mb-4 tracking-tight text-forest-green">18 Herbs Hair Oil</h1>
-          <div className="text-3xl font-semibold mb-6">$25.99</div>
-          <div className="text-sm text-gray-500 mb-8">8 fl oz / 236 mL | Flat Shipping: $7</div>
+          <h1 className="font-serif text-5xl mb-2 tracking-tight text-forest-green">Herbal Bloom 18 Herbs Hair Oil</h1>
+          <p className="text-xl text-gray-600 mb-6">8 fl oz / 236 mL</p>
+          <div className="text-4xl font-bold mb-6 text-forest-green">$25.99</div>
+          <div className="text-md text-gray-600 mb-8 font-medium">Flat Shipping: $7</div>
           
           <div className="flex items-center gap-4 mb-8">
             <label className="font-semibold">Quantity</label>
